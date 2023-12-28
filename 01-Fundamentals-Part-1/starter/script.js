@@ -60,5 +60,49 @@ console.log(x, y);
 const avrageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, avrageAge);
 
-*/
+template literals;
+
+const firstName = 'Fouad';
+const job = 'Developer';
+const birthYear = 1995;
+
+const currentYear = 2024;
+
+const fouad = "I'm " +firstName + ', a ' + (currentYear - birthYear) + " years old " + job;
+console.log(fouad);
+
+const fouadNew = `I'm ${firstName}, a ${currentYear - birthYear} years old ${job}`;
+
+console.log(fouadNew);
+
+
+console.log(`Just a regular string ...`);
+
+console.log(' String with \n\ multiple \n\ lines')
+console.log(` String with
+ multiple
+ lines`);
+
+ */
+
+const age = 15;
+
+if(age >= 18){
+  console.log(`Sarah can start driving 🚗`);
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`You have ${yearsLeft} more years left `)
+}
+
+
+const birthYear = 1995;
+let century;
+if(birthYear <= 2000){
+  century = 20;
+} else {
+     century = 21;
+}
+
+console.log(century)
+
 

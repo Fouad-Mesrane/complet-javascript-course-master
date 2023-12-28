@@ -83,7 +83,7 @@ console.log(` String with
  multiple
  lines`);
 
- */
+ 
 
 const age = 15;
 
@@ -104,5 +104,89 @@ if(birthYear <= 2000){
 }
 
 console.log(century)
+
+
+
+// type conversion
+const inputYear = '1995';
+console.log(Number(inputYear), inputYear);
+Number(inputYear);
+console.log(Number(inputYear) + 18);
+
+
+console.log(String(13))
+
+// type coercion
+console.log('I am ' + 23 + ' years old')
+
+// + triggers conversion from number to string
+// other operators is the opposite
+
+let n = '1' + 1;
+n = n-1;
+console.log(n);
+
+
+// 5 falsy values 0, "", undefined, null NaN
+
+console.log(Boolean(0))
+console.log(null)
+console.log(undefined)
+console.log(NaN)
+console.log('')
+
+const money = 0;
+
+if(money){
+    console.log("dont't spend it all");
+} else {
+    console.log(" you should get a job")
+}
+
+let height;
+
+if(height){
+    console.log('defined')
+}else{
+    console.log('undefined')
+}
+
+
+
+// === strict comparison
+// == loose comparison
+
+// const favourite = prompt("What is your favorite number?");
+// console.log(favourite)
+
+const day = 'monday';
+
+switch(day) {
+    case 'monday' : 
+    console.log('Plan course structure');
+    console.log('Go to coding meetup')
+    break;
+    case 'tuesday' :
+        console.log('prepare videos')
+}
+
+*/
+
+const age = 23;
+ age >= 18 ? console.log('hi') : console.log('no');
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 

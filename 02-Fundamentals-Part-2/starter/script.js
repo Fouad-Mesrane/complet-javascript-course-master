@@ -119,7 +119,7 @@ friends.unshift(23);
 const lastEle = friends.pop();
 console.log(lastEle)
 
-*/
+
 // Objects
 
 const jonas = {
@@ -133,4 +133,49 @@ const jonas = {
 jonas.age;
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`)
+
+*/
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Mesrane",
+  birthYear: 1995,
+  job: "Developer",
+  friends: ["Mi", "Peter", " Steven"],
+  hasDriversLicence: true,
+  getSummary : function(){
+    const result = `${this.firstName} is a ${this.calAge()} years old ${this.job}, and he has ${this.checkLicence()} drivers's licence`;
+    return result;
+  }  ,
+  checkLicence : function(){
+      if(this.hasDriversLicence){
+        return 'a';
+      } else {
+        return 'no'
+      }
+  },
+  // calAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+
+  // calAge : function(){
+  //   return 2037 - this.birthYear;
+  // }
+
+  calAge : function(){
+   this.age = 2037 - this.birthYear;
+   return this.age;
+  }
+
+  
+};
+
+// jonas.calAge();
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+
+//challenge
+console.log(jonas.getSummary());
+
 

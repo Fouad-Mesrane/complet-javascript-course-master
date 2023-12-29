@@ -134,7 +134,7 @@ jonas.age;
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`)
 
-*/
+
 
 const jonas = {
   firstName: "Jonas",
@@ -178,4 +178,42 @@ const jonas = {
 //challenge
 console.log(jonas.getSummary());
 
+
+// loops
+const jonas = [
+  "Jonas",
+  "Mesrane",
+  2024 - 1995,
+  "Developer",
+  ["Mi", "Peter", " Steven"],
+];
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+  console.log(jonas[i],);
+
+  // types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+console.log(types);
+
+const years = [1991, 1993, 1995];
+const ages = [];
+
+for(let i = 0; i < years.length; i++){
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages)
+*/
+
+
+let dice = Math.trunc(Math.random() * 6) + 1
+console.log (dice)
+
+while(dice !== 6){
+  console.log(`you rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+}
 

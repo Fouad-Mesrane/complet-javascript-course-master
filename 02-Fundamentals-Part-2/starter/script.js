@@ -91,7 +91,7 @@ function fruitProcessor(apples, oranges) {
 console.log(fruitProcessor(2, 3));
 
 const calcAverage = (score1, score2, score3) => {};
-*/
+
 
 // Arrays
 
@@ -118,4 +118,19 @@ friends.unshift(23);
 
 const lastEle = friends.pop();
 console.log(lastEle)
+
+*/
+// Objects
+
+const jonas = {
+    firstName : 'Jonas' ,
+    lastName : 'Mesrane',
+    age : 2024 - 1995,
+    job : 'Developer',
+    friends : ['Mi' , 'Peter', ' Steven']
+}
+
+jonas.age;
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`)
 

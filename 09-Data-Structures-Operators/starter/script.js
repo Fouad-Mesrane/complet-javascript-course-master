@@ -162,7 +162,7 @@ const game = {
   },
 };
 
-for (const [x, y] of game.scored.entries()) {
+/* for (const [x, y] of game.scored.entries()) {
   console.log(`Goal ${x + 1} : ${y}`);
 }
 
@@ -177,7 +177,7 @@ for (let i = 0; i < oddValues.length; i++) {
   sum += oddValues[i];
 }
 avg = sum / oddValues.length;
-console.log(avg);
+console.log(avg); */
 
 /* const [players1, players2] = game.players;
 
@@ -206,3 +206,114 @@ for (const [i, el] of menu.entries()) {
   console.log(`${i + 1}: ${el}`);
   
 } */
+
+// maps
+
+/* const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+rest.set(2, 'Lisbon, Portugal');
+
+rest
+.set('categories', ['Italian', 'Pizzeria', 'Vegetarian'])
+.set('open', 11)
+.set('close', 23)
+.set(true, 'We are open :D')
+.set(false, 'We are closed :(');
+
+
+console.log(rest.get(true));
+
+const time = 21;
+console.log(
+rest.get(time > rest.get('open') && time < rest.get('closed')));
+
+console.log(
+rest.has('categories'));
+
+const arr = [1, 2];
+rest.set(arr, 'Test');
+console.log(rest);
+
+console.log(rest.size);
+
+console.log(rest.get(arr));
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'try again']
+])
+
+console.log(question);
+// convert object to map
+
+const hoursMap = new Map(Object.entries(restaurant.openingHours));
+
+
+console.log(hoursMap);
+
+console.log(question.get('question'));
+
+for(const [key, value] of question){
+  if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+  
+  
+}
+
+const answer = 3;//Number(prompt('Your answer')); 
+
+/* answer === question.get('correct') ? console.log(question.get(true)): console.log(question.get(false));
+ */
+/*
+console.log(
+question.get(question.get('correct') === answer));
+
+// convert map to array
+
+console.log(...question);
+ */
+
+/* 
+Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
+
+1. Create an array 'events' of the different game events that happened (no duplicates)
+2. After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
+3. Print the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
+4. Loop over the events and log them to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:
+      [FIRST HALF] 17: ⚽️ GOAL
+
+GOOD LUCK 😀
+*/
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+const events = new Set(gameEvents.values());
+console.log(events);
+
+gameEvents.delete(64);
+console.log(gameEvents);
+
+console.log(`An event happened, on average, every ${90/ gameEvents.size} minutes`);
+
+for(const [key,value] of gameEvents){
+   key <= 45 ? `[First half]${console.log(gameEvents.get(key))} `: `[second half] ${console.log(gameEvents.get(key))}`;
+   ;
+   
+}

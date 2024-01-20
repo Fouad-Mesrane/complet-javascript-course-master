@@ -162,7 +162,7 @@ const game = {
   },
 };
 
-for (const [x, y] of game.scored.entries()) {
+/* for (const [x, y] of game.scored.entries()) {
   console.log(`Goal ${x + 1} : ${y}`);
 }
 
@@ -177,7 +177,7 @@ for (let i = 0; i < oddValues.length; i++) {
   sum += oddValues[i];
 }
 avg = sum / oddValues.length;
-console.log(avg);
+console.log(avg); */
 
 /* const [players1, players2] = game.players;
 
@@ -206,3 +206,58 @@ for (const [i, el] of menu.entries()) {
   console.log(`${i + 1}: ${el}`);
   
 } */
+
+// working with strings
+
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+/* console.log(plane[0]);
+console.log('B730'[3]);
+
+console.log(airline.slice(4));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You got the middle seat');
+  } else {
+    console.log('You are lucky');
+  }
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+ */
+
+const passenger = 'jOnAs';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// comparing  email
+const email = 'fouad@gmail.io';
+const loginEmail = ' Fouad@Gmail.Io \n';
+
+
+
+console.log(loginEmail.toLowerCase().trim());
+
+// replacing
+
+const priceGB = '288,97£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const announecement = 'All passengers to door 23, door 23';
+console.log(announecement.replaceAll('door', 'gate'));
+
+console.log('a+very+nice+string'.split('+'));
+
+
+
